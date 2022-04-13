@@ -1,12 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header 
+    h1= title
+    p Welcome to #{title}
 
-  main 
-    each message in messages
-      h2=message.text
-      h3=message.user
-      p=message.description 
-      p=message.added
+    main 
+      .button-container
+        a(href=`http://localhost:${process.env.PORT || 3000}/new`): button= 'Post your thoughts!'
+      each message in messages
+        h2=message.text
+        h3=message.user
+        p=message.description 
+        p=message.added
