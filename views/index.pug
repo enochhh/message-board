@@ -3,14 +3,18 @@ extends layout
 block content
   header 
     h1= title
-    p Welcome to #{title}
 
-    main 
+    div.secondary-header
+      p.intro Welcome to #{title}!
+
       .button-container
-        a(href=`http://localhost:${process.env.PORT || 3000}/new`): button= 'Post your thoughts!'
+        a(href=`http://localhost:${process.env.PORT || 3000}/new`): button.post= 'Post your thoughts!'
+  main
       each message in messages
-        h2.title=message.text
-        p.description=message.description 
-        footer
-          p.user=message.user
-          p.date=message.added 
+        .message-card
+          div.title-container
+            h2.title=message.text
+          p.description=message.description 
+          footer
+            p.user=message.user
+            p.date=message.added 
