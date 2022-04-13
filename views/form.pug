@@ -2,6 +2,8 @@ extends layout
 
 block content 
     h1 Got something to say?
+    .button-container 
+        a(href=`http://localhost:${process.env.PORT || 3000}`): button= 'Forgot what I was gonna say'
     form(action='/new', method='POST')
         input(type='text', placeholder='Title', name='title', id='title')
         textarea(name='description', placeholder='Write your thoughts here', cols='40')
