@@ -9,7 +9,8 @@ block content
       .button-container
         a(href=`http://localhost:${process.env.PORT || 3000}/new`): button= 'Post your thoughts!'
       each message in messages
-        h2=message.text
-        h3=message.user
-        p=message.description 
-        p=message.added
+        h2.title=message.text
+        p.description=message.description 
+        footer
+          p.user=message.user
+          p.date=message.added 
