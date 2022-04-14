@@ -31,11 +31,15 @@ p, textarea {
   font-size: 1.6rem;
 }
 
-.post {
+.post, .form-btn {
   padding: 5px 10px;
   border-radius: 8px;
-  border: none;
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.post {
+  border: 1px solid #f4f1f1;
   color: #f4f1f1;
   background-color: var(--blue-color);
 }
@@ -74,6 +78,8 @@ main {
 }
 
 .title-container {
+  border-top-left-radius: 8px; 
+  border-top-right-radius: 8px;
   background-color: var(--blue-color);
 }
 
@@ -91,6 +97,8 @@ main {
 
 
 form {
+  max-width: 600px;
+  margin: auto;
   display: flex; 
   flex-direction: column;
   padding: 40px;
@@ -109,14 +117,26 @@ form h2 {
 }
 
 textarea {
-  min-height: 300px;
+  min-height: 150px;
 }
 
 input {
-  min-height: 50px;
+  min-height: 30px;
 }
 
 textarea, input {
   padding: 15px;
   font-size: 1.8rem;
+  border-radius: 8px;
+  border: none;
 }
+
+.form-btn {
+  border: none;
+}
+
+.form-btn-container {
+  display: flex;
+  justify-content: center;
+}
+

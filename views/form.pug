@@ -8,12 +8,12 @@ block content
             p.intro A safe place for all your thoughts!
 
             .button-container 
-                a(href=`http://localhost:${process.env.PORT || 3000}`): button= 'Forgot what I was gonna say'
+                a(href=`http://localhost:${process.env.PORT || 3000}`): button.post= 'Forgot what I was gonna say'
     main    
         form(action='/new', method='POST')
             h2 Create post 
-            input(type='text', placeholder='Title', name='title', id='title')
-            textarea(name='description', placeholder='Write your thoughts here', cols='40')
-            input(type='text' placeholder='Your name' name='name' id='name')
-            .button-container
-                button(type='submit' id='submit-btn') Post
+            input(type='text', placeholder='Title', name='title', id='title' required)
+            textarea(name='description', placeholder='Write your thoughts here', cols='40' required)
+            input(type='text' placeholder='Your name' name='name' id='name' required)
+            .form-btn-container
+                button.form-btn(type='submit' id='submit-btn') Post
