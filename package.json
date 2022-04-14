@@ -17,6 +17,9 @@
     "nodemon": "^2.0.15",
     "pug": "2.0.0-beta11"
   },
+  "engines": {
+    "node": "16.13.2"
+  },
   "main": "app.js",
   "author": "",
   "license": "ISC",
